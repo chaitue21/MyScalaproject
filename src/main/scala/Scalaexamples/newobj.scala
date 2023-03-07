@@ -13,7 +13,7 @@ object newobj {
    // import spark.sql
     val data = "C:\\Users\\Dev12\\Downloads\\drive-dataset\\10000Records.csv"
     val df = spark.read.format(source = "csv").option("header", "true").option("inferSchema", "true").load(data)
-    df.show()
+    df.show(5)
     spark.stop()
   }
 }
